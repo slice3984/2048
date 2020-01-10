@@ -1,0 +1,73 @@
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    flex: 1 0 25%;
+    width: 31rem;
+    height: 31rem;
+    background-color: #aaa; // background-color: #717980;
+    border: .25rem solid transparent;
+    outline: 2px solid #717980;
+    //box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
+
+    &__row {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        margin: .25rem 0;
+    }
+
+    &__cell {
+        background-color: #bbb;
+        width: 100%;
+        margin: 0 .25rem;
+    }
+}
+
+.tile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 25%;
+    padding: .25rem;
+    transition: all 100ms ease-in-out;
+    color: #fff;
+    z-index: 0;
+    
+
+    &::before {
+        content: attr(value);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+        font-size: 3rem;
+    }
+}
+
+.color-1::before { background-color: #DBA714; }
+.color-2::before { background-color: #391FEA; }
+.color-3::before { background-color: #46385C; }
+.color-4::before { background-color: #E5154B; }
+.color-5::before { background-color: #83CA5D; }
+.color-6::before { background-color: #3E9A71; }
+.color-7::before { background-color: #3495F5; font-size: 2rem; }
+.color-8::before { background-color: #D9B182; font-size: 2rem; }
+.color-9::before { background-color: #6252A1; font-size: 2rem; }
+.color-10::before { background-color: #969CC6; font-size: 2rem; }
+.color-11::before { background-color: #514C34; font-size: 2rem; }
+.color-12::before { background-color: #BE3C3C; font-size: 2rem; }
+.color-13::before { background-color: #3CBEBE; font-size: 2rem; }
+.color-14::before { background-color: #451228; font-size: 2rem; }
+.color-15::before { background-color: #7B1386; font-size: 2rem; }
+.color-16::before { background-color: #5F1399; font-size: 2rem; }

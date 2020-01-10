@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 62.5%;
+  background-color: #ccc;
+}
+
+.header {
+  display: flex;
+  padding-left: 2rem;
+  justify-content: space-between;
+  background-color: #717980;
+}
+
+nav {
+  align-self: flex-end;
+}
+
+.nav {
+  align-self: flex-end;
+  display: flex;
+  list-style: none;
+  background-color: #676f75;
+  border-top-left-radius: 1rem;
+
+  & li {
+
+    & a {
+      text-decoration: none;
+      display: block;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+
+      &:hover {
+        border-top-left-radius: 1rem;
+        background-color: #716980;
+      }
+    }
+
+    &:nth-child(1) {
+      border-right: 1px solid #ddd;
+    }
+
+  }
+}
+
+.gameover {
+  align-self: center;
+  display: none;
+  animation: gameover-anim 2s ease-in;
+
+  & h1 {
+    color: #f44;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  & p {
+    
+    font-size: 1rem;
+  }
+}
+
+@keyframes gameover-anim {
+  from {
+    transform: scale(0) translateY(-10rem);
+    
+  }
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    &__highscore, 
+    &__score {
+      font-size: 1.25rem;
+      color: #eee;
+    }
+}
+
+.highscores {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+
+  &__content {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1.25rem;
+    font-size: 1.3rem;
+
+    & table thead tr td {
+      padding-right: 2rem;
+    }
+  }
+}
+
+.btn {
+  padding: .75rem 1rem;
+  margin-top: 2rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  background-color: #717980;
+
+  &:hover {
+    background-color: #716980;
+  }
+}
+
+.heading-primary {
+  font-size: 3rem;
+  color: #ff8366;
+}
+
+.u-padding-1 {
+  padding: 1rem 0;
+}
